@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html data-theme="light">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ecommerce website with HTML, Tailwind & DaisyUI</title>
+    <!-- Google Font Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+    <!-- tailwind css & DaisyUI Links -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font awesome CDN link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Tailwind CSS Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: 'rgb(139, 195, 74)',
+                        secondary: 'rgb(17, 17, 17)',
+                        body: 'rgb(248, 246, 243)',
+                        accent: 'rgb(106, 151, 57)',
+                        body_neutral: 'rgb(51, 51, 51)',
+                    },
+                    fontFamily: {
+                        Poppins: 'Poppins',
+                    },
+                    backgroundImage: {
+                        leaf1: "url('./images/leaf01.png')",
+                        call_to_action: "url('./images/call.jpg')",
+                        testimonials: "url('./images/testimonials.jpg')",
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+
+<body class="font-Poppins">
+    <!-- banner section start -->
+    <header>
+        <!-- nav bar section start -->
+        <nav class="navbar w-11/12 mx-auto">
+            <div class="navbar-start">
+                <a href="#">
+                    <img class="w-[150px]" src="./images/logo.svg" alt="" />
+                </a>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+                <ul class="menu menu-horizontal px-1 flex items-center gap-5 text-lg font-medium">
+                    <li class="hover:text-primary transition-colors ease-in-out duration-300">
+                        <a href="#">Home</a>
+                    </li>
+                    <li class="hover:text-primary transition-colors ease-in-out duration-300">
+                        <a href="#">Everything</a>
+                    </li>
+                    <li class="hover:text-primary transition-colors ease-in-out duration-300">
+                        <a href="#">Groceries</a>
+                    </li>
+                    <li class="hover:text-primary transition-colors ease-in-out duration-300">
+                        <a href="#">About</a>
+                    </li>
+                    <li class="hover:text-primary transition-colors ease-in-out duration-300">
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="navbar-end gap-5 items-center">
+                <div class="flex gap-5 text-lg">
+                    <button class="flex items-center gap-2 font-semibold text-accent">
+                        <span>$10.00</span>
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </button>
+                    <button><i class="fa-solid fa-user"></i></button>
+                </div>
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden bg-primary text-lg">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 right-0 p-2 shadow text-lg font-medium gap-5">
+                        <li class="hover:text-primary transition-colors ease-in-out duration-300">
+                            <a href="#">Home</a>
+                        </li>
+                        <li class="hover:text-primary transition-colors ease-in-out duration-300">
+                            <a href="#">Everything</a>
+                        </li>
+                        <li class="hover:text-primary transition-colors ease-in-out duration-300">
+                            <a href="#">Groceries</a>
+                        </li>
+                        <li class="hover:text-primary transition-colors ease-in-out duration-300">
+                            <a href="#">About</a>
+                        </li>
+                        <li class="hover:text-primary transition-colors ease-in-out duration-300">
+                            <a href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Banner section start -->
+        <section class="bg-leaf1 bg-no-repeat bg-right-bottom">
+            <div class="h-full w-full bg-body bg-opacity-90">
+                <div
+                    class="lg:w-9/12 w-11/12 h-full mx-auto sm:grid grid-cols-2 gap-10 items-center justify-center sm:py-28 py-5">
+                    <div class="">
+                        <img src="./images/bannerbg.png" alt="" />
+                    </div>
+                    <div class="sm:text-left text-center">
+                        <img class="sm:block hidden" src="./images/small-leaf.png" alt="" />
+                        <h4 class="sm:text-xl text-lg font-semibold my-5">
+                            Best Quality Products
+                        </h4>
+                        <h1 class="lg:text-6xl text-4xl font-bold leading-tight">
+                            Join The Organic Movement!
+                        </h1>
+                        <p class="lg:w-3/4 text-neutral-500 my-5">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
+                            tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+                        </p>
+                        <div class="flex sm:justify-start justify-center pb-10">
+                            <button
+                                class="flex gap-2 items-center bg-accent hover:bg-primary px-10 py-4 rounded-md font-semibold text-white transition-colors duration-300 ease-in-out">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <span>shop Now</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+    <!-- main section start -->
+    <main>
+        <!-- section: Special features section -->
+        <section class="bg-secondary text-white">
+            <div class="w-11/12 mx-auto py-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 sm:gap-10 gap-5">
+                <div class="bg-body_neutral p-10 rounded-sm flex items-start gap-5">
+                    <div>
+                        <i class="fa-solid fa-truck text-4xl text-primary"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold capitalize mb-2 leading-none">
+                            free shipping
+                        </h3>
+                        <p>Above $5 Only</p>
+                    </div>
+                </div>
+                <div class="bg-body_neutral p-10 rounded-sm flex items-start gap-5">
+                    <div>
+                        <i class="fa-solid fa-certificate text-4xl text-primary"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold capitalize mb-2 leading-none">
+                            Certified Organic
+                        </h3>
+
+                        <p>100% Organic</p>
+                    </div>
+                </div>
+                <div class="bg-body_neutral p-10 rounded-sm flex items-start gap-5">
+                    <div>
+                        <i class="fa-solid fa-piggy-bank text-4xl text-primary"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold capitalize mb-2 leading-none">
+                            Huge Savings
+                        </h3>
+                        <p>At Lowest Price</p>
+                    </div>
+                </div>
+                <div class="bg-body_neutral p-10 rounded-sm flex items-start gap-5">
+                    <div>
+                        <i class="fa-solid fa-recycle text-4xl text-primary"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold capitalize mb-2 leading-none">
+                            Easy Returns
+                        </h3>
+                        <p>No Questions Asked</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- about section start -->
+        <section class="grid lg:grid-cols-2 items-center gap-10">
+            <div class="w-11/12 lg:ml-auto mx-auto lg:py-0 pt-10 capitalize">
+                <h5 class="text-xl font-semibold">about us</h5>
+                <h2 class="sm:text-6xl text-4xl sm:my-10 my-5">
+                    tell website visitors who you are and why they should choose your
+                    business
+                </h2>
+                <p class="sm:text-lg text-base leading-8 text-justify sm:mb-10 mb-5">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
+                    earum, tenetur quam repellendus architecto sequi consequatur
+                    deserunt illum? Repellat, consequatur quae. Ut, quas distinctio
+                    expedita perspiciatis molestias voluptas nam optio unde sunt dolor,
+                    quo dicta reiciendis! Alias nostrum tempore blanditiis earum eum
+                    autem sapiente voluptatum. Optio sunt perferendis maiores natus!
+                </p>
+                <button
+                    class="flex gap-2 items-center bg-accent hover:bg-primary px-10 py-4 rounded-md font-semibold text-white transition-colors duration-300 ease-in-out">
+                    Find Out More
+                </button>
+            </div>
+            <img src="./images/about.jpg" alt="" />
+        </section>
+
+        <!-- Call to action -->
+        <section class="bg-call_to_action h-96 py-56 bg-no-repeat bg-cover bg-center relative">
+            <div class="absolute top-0 left-0 w-full h-full bg-secondary/30 flex justify-center items-center">
+                <div class="z-10 text-white">
+                    <h3 class="text-5xl font-semibold text-center">
+                        Insert A call to action
+                    </h3>
+                    <p class="text-xl w-2/3 mx-auto text-center my-5">
+                        think of what you want your visitors to do next maybe they should
+                        contact you?
+                    </p>
+                    <div class="flex justify-center">
+                        <button
+                            class="btn bg-transparent hover:bg-primary hover:border-primary text-white border-white">
+                            Get In Touch
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- products section -->
+        <section class="bg-body py-10">
+            <div class="w-11/12 mx-auto">
+                <div class="flex flex-col justify-center items-center gap-5 my-10">
+                    <img src="./images/small-leaf.png" alt="" />
+                    <h2 class="text-4xl font-semibold">Best Selling Products</h2>
+                </div>
+                <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-10 mb-20">
+                    <div class="card bg-base-100 w-full rounded-md shadow">
+                        <figure class="px-10 pt-10">
+                            <img src="./images/product01.jpg" alt="Shoes" class="rounded-xl" />
+                        </figure>
+                        <div class="card-body items-center text-center">
+                            <h3 class="capitalize text-slate-400">Groceries</h3>
+                            <h2 class="card-title capitalize text-body_neutral">
+                                Assorted Coffee
+                            </h2>
+                            <p class="text-yellow-400">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </p>
+                            <p>$35.00</p>
+                            <div class="card-actions">
+                                <button
+                                    class="btn flex gap-2 items-center bg-accent hover:bg-primary px-10 py-4 rounded-md font-semibold text-white transition-colors duration-300 ease-in-out">
+                                    <span>Buy Now</span>
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card bg-base-100 w-full rounded-md shadow">
+                        <figure class="px-10 pt-10">
+                            <img src="./images/product02.jpg" alt="Shoes" class="rounded-xl" />
+                        </figure>
+                        <div class="card-body items-center text-center">
+                            <h3 class="capitalize text-slate-400">Groceries</h3>
+                            <h2 class="card-title capitalize text-body_neutral">
+                                Assorted Coffee
+                            </h2>
+                            <p class="text-yellow-400">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </p>
+                            <p>$35.00</p>
+                            <div class="card-actions">
+                                <button
+                                    class="btn flex gap-2 items-center bg-accent hover:bg-primary px-10 py-4 rounded-md font-semibold text-white transition-colors duration-300 ease-in-out">
+                                    <span>Buy Now</span>
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card bg-base-100 w-full rounded-md shadow">
+                        <figure class="px-10 pt-10">
+                            <img src="./images/product03.jpg" alt="Shoes" class="rounded-xl" />
+                        </figure>
+                        <div class="card-body items-center text-center">
+                            <h3 class="capitalize text-slate-400">Groceries</h3>
+                            <h2 class="card-title capitalize text-body_neutral">
+                                Assorted Coffee
+                            </h2>
+                            <p class="text-yellow-400">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </p>
+                            <p>$35.00</p>
+                            <div class="card-actions">
+                                <button
+                                    class="btn flex gap-2 items-center bg-accent hover:bg-primary px-10 py-4 rounded-md font-semibold text-white transition-colors duration-300 ease-in-out">
+                                    <span>Buy Now</span>
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card bg-base-100 w-full rounded-md shadow">
+                        <figure class="px-10 pt-10">
+                            <img src="./images/product04.jpg" alt="Shoes" class="rounded-xl" />
+                        </figure>
+                        <div class="card-body items-center text-center">
+                            <h3 class="capitalize text-slate-400">Groceries</h3>
+                            <h2 class="card-title capitalize text-body_neutral">
+                                Assorted Coffee
+                            </h2>
+                            <p class="text-yellow-400">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </p>
+                            <p>$35.00</p>
+                            <div class="card-actions">
+                                <button
+                                    class="btn flex gap-2 items-center bg-accent hover:bg-primary px-10 py-4 rounded-md font-semibold text-white transition-colors duration-300 ease-in-out">
+                                    <span>Buy Now</span>
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card bg-base-100 w-full rounded-md shadow">
+                        <figure class="px-10 pt-10">
+                            <img src="./images/product05.jpg" alt="Shoes" class="rounded-xl" />
+                        </figure>
+                        <div class="card-body items-center text-center">
+                            <h3 class="capitalize text-slate-400">Groceries</h3>
+                            <h2 class="card-title capitalize text-body_neutral">
+                                Assorted Coffee
+                            </h2>
+                            <p class="text-yellow-400">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </p>
+                            <p>$35.00</p>
+                            <div class="card-actions">
+                                <button
+                                    class="btn flex gap-2 items-center bg-accent hover:bg-primary px-10 py-4 rounded-md font-semibold text-white transition-colors duration-300 ease-in-out">
+                                    <span>Buy Now</span>
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card bg-base-100 w-full rounded-md shadow">
+                        <figure class="px-10 pt-10">
+                            <img src="./images/product06.jpg" alt="Shoes" class="rounded-xl" />
+                        </figure>
+                        <div class="card-body items-center text-center">
+                            <h3 class="capitalize text-slate-400">Groceries</h3>
+                            <h2 class="card-title capitalize text-body_neutral">
+                                Assorted Coffee
+                            </h2>
+                            <p class="text-yellow-400">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </p>
+                            <p>$35.00</p>
+                            <div class="card-actions">
+                                <button
+                                    class="btn flex gap-2 items-center bg-accent hover:bg-primary px-10 py-4 rounded-md font-semibold text-white transition-colors duration-300 ease-in-out">
+                                    <span>Buy Now</span>
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card bg-base-100 w-full rounded-md shadow">
+                        <figure class="px-10 pt-10">
+                            <img src="./images/product07.jpg" alt="Shoes" class="rounded-xl" />
+                        </figure>
+                        <div class="card-body items-center text-center">
+                            <h3 class="capitalize text-slate-400">Groceries</h3>
+                            <h2 class="card-title capitalize text-body_neutral">
+                                Assorted Coffee
+                            </h2>
+                            <p class="text-yellow-400">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </p>
+                            <p>$35.00</p>
+                            <div class="card-actions">
+                                <button
+                                    class="btn flex gap-2 items-center bg-accent hover:bg-primary px-10 py-4 rounded-md font-semibold text-white transition-colors duration-300 ease-in-out">
+                                    <span>Buy Now</span>
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card bg-base-100 w-full rounded-md shadow">
+                        <figure class="px-10 pt-10">
+                            <img src="./images/product08.jpg" alt="Shoes" class="rounded-xl" />
+                        </figure>
+                        <div class="card-body items-center text-center">
+                            <h3 class="capitalize text-slate-400">Groceries</h3>
+                            <h2 class="card-title capitalize text-body_neutral">
+                                Assorted Coffee
+                            </h2>
+                            <p class="text-yellow-400">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </p>
+                            <p>$35.00</p>
+                            <div class="card-actions">
+                                <button
+                                    class="btn flex gap-2 items-center bg-accent hover:bg-primary px-10 py-4 rounded-md font-semibold text-white transition-colors duration-300 ease-in-out">
+                                    <span>Buy Now</span>
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- brands section start -->
+        <section class="flex lg:flex-row flex-col bg-white justify-center items-center py-10 bg-body">
+            <h2 class="text-2xl font-semibold">Featured Brands:</h2>
+            <div class="flex lg:flex-nowrap flex-wrap justify-center items-center">
+                <img src="./images/logo-1.svg" alt="" />
+                <img src="./images/logo-2.svg" alt="" />
+                <img src="./images/logo-3.svg" alt="" />
+                <img src="./images/logo-4.svg" alt="" />
+                <img src="./images/logo-5.svg" alt="" />
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-secondary text-white p-10">
+        <div class="footer w-11/12 mx-auto py-10">
+            <aside>
+                <img src="./images/logo-white.png" alt="" />
+                <p>Providing Organic Food since 1992</p>
+            </aside>
+            <nav>
+                <h6 class="footer-title">Services</h6>
+                <a class="link link-hover">Branding</a>
+                <a class="link link-hover">Design</a>
+                <a class="link link-hover">Marketing</a>
+                <a class="link link-hover">Advertisement</a>
+            </nav>
+            <nav>
+                <h6 class="footer-title">Company</h6>
+                <a class="link link-hover">About us</a>
+                <a class="link link-hover">Contact</a>
+                <a class="link link-hover">Jobs</a>
+                <a class="link link-hover">Press kit</a>
+            </nav>
+            <nav>
+                <h6 class="footer-title">Legal</h6>
+                <a class="link link-hover">Terms of use</a>
+                <a class="link link-hover">Privacy policy</a>
+                <a class="link link-hover">Cookie policy</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+
+</html>
